@@ -1,7 +1,7 @@
 Summary:	The GNOME2 virtual file-system libraries
 Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Name:		gnome-mime-data
-Version:	1.0.0
+Version:	1.0.2
 Release:	1
 License:	LGPL
 Group:		X11/Applications
