@@ -33,7 +33,7 @@ Ten modu³ zawiera bazowe MIME oraz bazê Aplikacji dla GNOME.
 Przeznaczony jest do udostêpniania przez funkcje MIME w GnomeVFS.
 
 %package devel
-Summaru:	Developmet files for gnome-mime-data
+Summary:	Developmet files for gnome-mime-data
 Summary(pl):	Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Bibliotheken
