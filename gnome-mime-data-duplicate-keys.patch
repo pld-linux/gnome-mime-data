@@ -1,0 +1,349 @@
+diff -Nuard gnome-mime-data-2.4.1.orig/gnome-vfs.applications gnome-mime-data-2.4.1/gnome-vfs.applications
+--- gnome-mime-data-2.4.1.orig/gnome-vfs.applications	2003-12-22 19:56:33.000000000 +0100
++++ gnome-mime-data-2.4.1/gnome-vfs.applications	2004-04-18 13:49:32.434467384 +0200
+@@ -153,15 +153,6 @@
+ 	requires_terminal=false
+ 	mime_types=application/pdf,application/postscript
+ 
+-gimp
+-	command=gimp-remote --new
+-	name=The GIMP
+-	can_open_multiple_files=true
+-	expects_uris=non-file
+-	requires_terminal=false
+-	supported_uri_schemes=file
+-	mime_types=image/bmp,image/gif,image/jpeg,image/png,image/tiff,image/x-xpixmap,image/x-bmp,image/x-png,image/x-portable-anymap,image/x-portable-bitmap,image/x-portable-graymap,image/x-portable-pixmap,image/x-psd,image/x-xbitmap,image/x-xcf
+-
+ glade
+ 	command=glade
+ 	name=Glade
+diff -Nuard gnome-mime-data-2.4.1.orig/gnome-vfs.keys.in gnome-mime-data-2.4.1/gnome-vfs.keys.in
+--- gnome-mime-data-2.4.1.orig/gnome-vfs.keys.in	2003-12-22 20:05:12.000000000 +0100
++++ gnome-mime-data-2.4.1/gnome-vfs.keys.in	2004-04-18 13:52:34.000865096 +0200
+@@ -1288,22 +1288,15 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/cgm
+ 	_description=CGM image
+ 	_category=Images
+ 
+-image/g3fax
+-	_description=G3 fax image
+-	_category=Images
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-
+ image/gif
+ 	_description=GIF image
+ 	default_action_type=component
+@@ -1311,9 +1304,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/ief
+@@ -1327,9 +1320,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ # also image/jpeg
+@@ -1340,9 +1333,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ # also image/jpeg
+@@ -1353,9 +1346,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ # also image/x-png
+@@ -1366,9 +1359,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/svg
+@@ -1394,9 +1387,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/vnd.djvu
+@@ -1431,9 +1424,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	icon_filename=gnome-image-bmp
+ 	_category=Images
+ 
+@@ -1441,14 +1434,6 @@
+ 	_description=CMU raster image
+ 	_category=Images
+ 
+-image/x-compressed-xcf
+-	_description=Compressed GIMP document
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	icon_filename=gnome-image-xcf
+-	_category=Images
+-
+ image/x-dcm
+ 	_description=Digital Imaging and Communications in Medicine image
+ 	_category=Images
+@@ -1468,14 +1453,6 @@
+ 	short_list_application_ids_for_intermediate_user_level=openoffice,staroffice
+ 	short_list_application_ids_for_advanced_user_level=openoffice,staroffice
+ 
+-image/x-fits
+-	_description=Flexible Image Transport System
+-	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	_category=Images
+-
+ image/x-fpx
+ 	_description=FlashPix Image
+ 	_category=Images
+@@ -1487,9 +1464,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/x-icb
+@@ -1543,9 +1520,9 @@
+ image/x-pcx
+ 	_description=PC Paintbrush image
+ 	_category=Images
+-	short_list_application_ids_for_novice_user_level=openoffice,staroffice,gimp
+-	short_list_application_ids_for_intermediate_user_level=openoffice,staroffice,gimp
+-	short_list_application_ids_for_advanced_user_level=openoffice,staroffice,gimp
++	short_list_application_ids_for_novice_user_level=openoffice,staroffice
++	short_list_application_ids_for_intermediate_user_level=openoffice,staroffice
++	short_list_application_ids_for_advanced_user_level=openoffice,staroffice
+ 
+ image/x-photo-cd
+ 	_description=Photo CD image
+@@ -1569,9 +1546,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	icon_filename=gnome-image-png
+ 	_category=Images
+ 
+@@ -1582,9 +1559,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/x-portable-bitmap
+@@ -1594,9 +1571,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	icon_filename=gnome-image-pbm
+ 	_category=Images
+ 
+@@ -1607,9 +1584,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ image/x-portable-pixmap
+@@ -1619,18 +1596,18 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	icon_filename=gnome-image-ppm
+ 	_category=Images
+ 
+ image/x-psd
+ 	_description=Photoshop document
+ 	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=eog,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,gimp
++	short_list_application_ids_for_novice_user_level=eog
++	short_list_application_ids_for_intermediate_user_level=eog
++	short_list_application_ids_for_advanced_user_level=eog
+ 	icon_filename=gnome-image-psd
+ 	_category=Images
+ 
+@@ -1639,30 +1616,6 @@
+ 	icon_filename=gnome-image-rgb
+ 	_category=Images
+ 
+-image/x-sgi
+-	_description=Silicon Graphics image
+-	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	_category=Images
+-
+-image/x-sun-raster
+-	_description=SUN Rasterfile
+-	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	_category=Images
+-
+-image/x-tga
+-	_description=TarGA image
+-	icon_filename=gnome-image-tga
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	_category=Images
+-
+ image/x-wmf
+ 	_description=Windows metafile graphics
+ 	default_action_type=application
+@@ -1674,21 +1627,12 @@
+ image/x-xbitmap
+ 	_description=X bitmap image
+ 	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=eog,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,gimp
++	short_list_application_ids_for_novice_user_level=eog
++	short_list_application_ids_for_intermediate_user_level=eog
++	short_list_application_ids_for_advanced_user_level=eog
+ 	icon_filename=gnome-image-xbm
+ 	_category=Images
+ 
+-image/x-xcf
+-	_description=GIMP document
+-	default_action_type=application
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
+-	icon_filename=gnome-image-xcf
+-	_category=Images
+-
+ image/x-xfig
+ 	_description=xfig vector graphic
+ 	default_action_type=application
+@@ -1704,17 +1648,9 @@
+ 	short_list_component_iids_for_novice_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_intermediate_user_level=OAFIID:GNOME_EOG_Control
+ 	short_list_component_iids_for_advanced_user_level=OAFIID:GNOME_EOG_Control
+-	short_list_application_ids_for_novice_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes,gimp
+-	short_list_application_ids_for_advanced_user_level=eog,electric_eyes,gimp
+-	_category=Images
+-
+-image/x-xwindowdump
+-	_description=X window image
+-	icon_filename=gnome-image-xwd
+-	short_list_application_ids_for_novice_user_level=gimp
+-	short_list_application_ids_for_intermediate_user_level=gimp
+-	short_list_application_ids_for_advanced_user_level=gimp
++	short_list_application_ids_for_novice_user_level=eog,electric_eyes
++	short_list_application_ids_for_intermediate_user_level=eog,electric_eyes
++	short_list_application_ids_for_advanced_user_level=eog,electric_eyes
+ 	_category=Images
+ 
+ message/delivery-status
