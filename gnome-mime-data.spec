@@ -1,7 +1,8 @@
 Summary:	The GNOME2 virtual file-system libraries
 Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
+Summary(pt_BR):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 License:	LGPL
 Group:		X11/Applications
@@ -26,6 +27,10 @@ It is meant to be accessed through the MIME functions in GnomeVFS.
 %description -l pl
 Ten modu³ zawiera bazowe MIME oraz bazê Aplikacji dla GNOME.
 Przeznaczony jest do udostêpniania przez funkcje MIME w GnomeVFS.
+
+%description -l pt_BR
+O GNOME MIME contém arquivos de identificação e tipos MIME para o
+sistema GNOME.
 
 %package devel
 Summary:	Development files for gnome-mime-data
