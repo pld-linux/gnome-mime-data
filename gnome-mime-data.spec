@@ -13,7 +13,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.2.3
 BuildRequires:	libtool
-Requires:	gnome-vfs2
 Provides:	gnome-vfs-data = %{version}
 Obsoletes:	gnome-vfs-data
 BuildArch:	noarch
