@@ -5,19 +5,6 @@ Version:	1.0.3
 Release:	1
 License:	LGPL
 Group:		X11/Applications
-Group(cs):	X11/Aplikace
-Group(da):	X11/Programmer
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(fr):	X11/Applications
-Group(it):	X11/Applicazioni
-Group(ja):	X11/¥¢¥×¥ê¥±¡¼¥·¥ç¥ó
-Group(no):	X11/Applikasjoner
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
-Group(ru):	X11/ğÒÉÌÏÖÅÎÉÑ
-Group(sv):	X11/Tillämpningar
 Source0:	ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/gnome-mime-data/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
@@ -44,20 +31,6 @@ Przeznaczony jest do udostêpniania przez funkcje MIME w GnomeVFS.
 Summary:	Development files for gnome-mime-data
 Summary(pl):	Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data
 Group:		X11/Development/Libraries
-Group(cs):	X11/Vıvojové prostøedky/Knihovny
-Group(da):	X11/Udvikling/Biblioteker
-Group(de):	X11/Entwicklung/Bibliotheken
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(it):	X11/Sviluppo/Librerie
-Group(ja):	X11/³«È¯/¥é¥¤¥Ö¥é¥ê
-Group(no):	X11/Applikasjoner/Biblioteker
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(pt):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
-Group(sv):	X11/Utveckling/Bibliotek
-Group(uk):	X11/òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
 
 %description devel
