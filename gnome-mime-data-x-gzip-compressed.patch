@@ -1,0 +1,21 @@
+diff -Nuard gnome-mime-data-2.4.0.orig/gnome-vfs.keys.in gnome-mime-data-2.4.0/gnome-vfs.keys.in
+--- gnome-mime-data-2.4.0.orig/gnome-vfs.keys.in	2003-09-10 11:42:07.000000000 +0200
++++ gnome-mime-data-2.4.0/gnome-vfs.keys.in	2003-09-22 22:04:33.000000000 +0200
+@@ -1034,6 +1034,17 @@
+ 	_category=Packages
+ 	use_category_default=yes
+ 
++application/x-zip-compressed
++	_description=Zip archive
++	icon_filename=gnome-compressed
++	vfs_method=zip
++	default_action_type=application
++	short_list_application_ids_for_novice_user_level=file-roller
++	short_list_application_ids_for_intermediate_user_level=file-roller
++	short_list_application_ids_for_advanced_user_level=file-roller
++	_category=Packages
++	use_category_default=yes
++
+ audio/ac3
+ 	_description=Dolby Digital audio
+ 	icon_filename=i-music
