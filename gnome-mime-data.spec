@@ -48,12 +48,17 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS ChangeLog README NEWS
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc *.gz
 %{_sysconfdir}/*
+%{_datadir}/application-registry
+%{_datadir}/mime-info/*
+%{_mandir}/man5/*
 %{_pkgconfigdir}/*.pc
-%{_datadir}/*/*
+%{_pixmapsdir}/*
