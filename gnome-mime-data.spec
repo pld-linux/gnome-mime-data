@@ -51,7 +51,7 @@ Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data.
 %build
 rm -f missing
 glib-gettextize --copy --force
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
