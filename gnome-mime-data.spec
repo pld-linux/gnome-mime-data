@@ -10,8 +10,6 @@ Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
 Group(pt_BR):	X11/AplicaГУes
 Group(pt):	X11/AplicaГУes
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Source0:	ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/gnome-mime-data/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
