@@ -3,7 +3,7 @@ Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Summary(pt_BR):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
 Version:	2.0.1
-Release:	3
+Release:	3.1
 License:	LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
@@ -17,6 +17,7 @@ Provides:	gnome-vfs-data = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome-vfs-data
 
+%define					_prefix					/usr/X11R6
 %define         _mandir         %{_prefix}/man
 %define         _sysconfdir     /etc/X11/GNOME2
 
@@ -62,8 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir} \
-	icondir=%{_pixmapsdir}
+	pkgconfigdir=%{_pkgconfigdir}
 
 %find_lang %{name}
 
