@@ -1,7 +1,7 @@
 Summary:	The GNOME2 virtual file-system libraries
 Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Name:		gnome-mime-data
-Version:	1.0.6
+Version:	1.0.7
 Release:	1
 License:	LGPL
 Group:		X11/Applications
@@ -43,7 +43,12 @@ Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data.
 %setup -q
 
 %build
+rm -f missing
 gettextize --copy --force
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c -f
 %configure
 %{__make}
 
