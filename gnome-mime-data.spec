@@ -2,11 +2,11 @@ Summary:	The GNOME2 virtual file-system libraries
 Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Summary(pt_BR):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
-Version:	2.2.0
+Version:	2.3.0
 Release:	1
 License:	LGPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.2/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -74,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/application-registry
 %{_datadir}/mime-info
 %{_mandir}/man5/*
-%{_pixmapsdir}/*
 
 %files devel
 %defattr(644,root,root,755)
