@@ -32,6 +32,25 @@ It is meant to be accessed through the MIME functions in GnomeVFS.
 Ten modu≥ zawiera bazowe MIME oraz bazÍ Aplikacji dla GNOME.
 Przeznaczony jest do udostÍpniania przez funkcje MIME w GnomeVFS.
 
+%package devel
+Summaru:	Developmet files for gnome-mime-data
+Summary(pl):	Pliki potrzebne przy tworzeniu programÛw uøywajacych gnome-mime-data
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Bibliotheken
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	X11/Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
+Requires:	%{name} = %{version}
+
+%description devel
+Developmet files for gnome-mime-data.
+
+%description devel -l pl
+Pliki potrzebne przy tworzeniu programÛw uøywajacych gnome-mime-data.
+
 %prep
 %setup -q
 
@@ -61,5 +80,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/application-registry
 %{_datadir}/mime-info/*
 %{_mandir}/man5/*
-%{_pkgconfigdir}/*.pc
 %{_pixmapsdir}/*
+
+%files devel
+%defattr(644,root,root,755)
+%{_pkgconfigdir}/*.pc
