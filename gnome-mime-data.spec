@@ -2,15 +2,18 @@ Summary:	The GNOME2 virtual file-system libraries
 Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Name:		gnome-mime-data
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
+Group(cs):	X11/Aplikace
+Group(de):	X11/Anwendungen
 Group(es):	X11/Aplicaciones
 Group(fr):	X11/Applications
+Group(ja):	X11/¥¢¥×¥ê¥±¡¼¥·¥ç¥ó
 Group(pl):	X11/Aplikacje
 Group(pt_BR):	X11/Aplicações
 Group(pt):	X11/Aplicações
+Group(ru):	X11/ğÒÉÌÏÖÅÎÉÑ
 Source0:	ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/gnome-mime-data/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
@@ -19,6 +22,7 @@ BuildRequires:	libtool
 BuildArch:	noarch
 Provides:	gnome-vfs-data = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	gnome-vfs-data
 
 %define         _prefix         /usr/X11R6
 %define         _mandir         %{_prefix}/man
@@ -36,11 +40,14 @@ Przeznaczony jest do udostêpniania przez funkcje MIME w GnomeVFS.
 Summary:	Development files for gnome-mime-data
 Summary(pl):	Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data
 Group:		X11/Development/Libraries
+Group(cs):	X11/Vıvojové prostøedky/Knihovny
 Group(de):	X11/Entwicklung/Bibliotheken
 Group(es):	X11/Desarrollo/Bibliotecas
 Group(fr):	X11/Development/Librairies
+Group(ja):	X11/³«È¯/¥é¥¤¥Ö¥é¥ê
 Group(pl):	X11/Programowanie/Biblioteki
 Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(pt):	X11/Desenvolvimento/Bibliotecas
 Group(ru):	X11/òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	X11/òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
