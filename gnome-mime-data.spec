@@ -65,8 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-gzip -9nf AUTHORS ChangeLog README NEWS
-
 %find_lang %{name}
 
 %clean
@@ -74,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog README NEWS
 %{_sysconfdir}/*
 %{_datadir}/application-registry
 %{_datadir}/mime-info/*
