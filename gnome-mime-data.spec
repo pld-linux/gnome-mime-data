@@ -11,7 +11,6 @@ URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	glib2-devel >= 2.0.6
 BuildArch:	noarch
 Provides:	gnome-vfs-data = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
