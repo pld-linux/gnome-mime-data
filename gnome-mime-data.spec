@@ -3,12 +3,13 @@ Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
 Summary(pt_BR):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
 Version:	2.4.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.4/%{name}-%{version}.tar.bz2
 # Source0-md5:	a8bd52c6876a5294abc402f8a581ac1a
 URL:		http://www.gnome.org/
+Patch0:		%{name}-duplicate-keys.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.2.3
@@ -44,6 +45,7 @@ Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
