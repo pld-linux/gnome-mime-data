@@ -12,7 +12,9 @@ URL:		http://www.gnome.org/
 Patch0:		%{name}-duplicate-keys.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.2.3
+BuildRequires:	intltool
 BuildRequires:	libtool
 Provides:	gnome-vfs-data = %{version}
 Obsoletes:	gnome-vfs-data
