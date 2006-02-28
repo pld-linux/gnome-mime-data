@@ -49,7 +49,7 @@ Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data.
 %patch0 -p1
 
 %build
-glib-gettextize --copy --force
+%{__glib_gettextize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-	
+
 install -d $RPM_BUILD_ROOT%{_mandir}/man5
 install man/gnome-vfs-mime.5 $RPM_BUILD_ROOT%{_mandir}/man5/gnome-vfs-mime.5
 
