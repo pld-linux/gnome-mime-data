@@ -1,6 +1,6 @@
 Summary:	The GNOME2 virtual file-system libraries
-Summary(pl):	Biblioteki wirtualnego systemu plików dla GNOME2
-Summary(pt_BR):	Arquivos de dados tipo MIME para o desktop GNOME
+Summary(pl.UTF-8):   Biblioteki wirtualnego systemu plikÃ³w dla GNOME2
+Summary(pt_BR.UTF-8):   Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
 Version:	2.4.3
 Release:	1
@@ -24,25 +24,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module contains the base MIME and Application database for GNOME.
 It is meant to be accessed through the MIME functions in GnomeVFS.
 
-%description -l pl
-Ten modu³ zawiera bazowe MIME oraz bazê Aplikacji dla GNOME.
-Przeznaczony jest do udostêpniania przez funkcje MIME w GnomeVFS.
+%description -l pl.UTF-8
+Ten moduÅ‚ zawiera bazowe MIME oraz bazÄ™ Aplikacji dla GNOME.
+Przeznaczony jest do udostÄ™pniania przez funkcje MIME w GnomeVFS.
 
-%description -l pt_BR
-O GNOME MIME contém arquivos de identificação e tipos MIME para o
+%description -l pt_BR.UTF-8
+O GNOME MIME contÃ©m arquivos de identificaÃ§Ã£o e tipos MIME para o
 sistema GNOME.
 
 %package devel
 Summary:	Development files for gnome-mime-data
-Summary(pl):	Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data
+Summary(pl.UTF-8):   Pliki potrzebne przy tworzeniu programÃ³w uÅ¼ywajacych gnome-mime-data
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Developmet files for gnome-mime-data.
 
-%description devel -l pl
-Pliki potrzebne przy tworzeniu programów u¿ywajacych gnome-mime-data.
+%description devel -l pl.UTF-8
+Pliki potrzebne przy tworzeniu programÃ³w uÅ¼ywajacych gnome-mime-data.
 
 %prep
 %setup -q
