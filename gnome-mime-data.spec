@@ -1,6 +1,6 @@
 Summary:	The GNOME2 virtual file-system libraries
-Summary(pl.UTF-8):   Biblioteki wirtualnego systemu plików dla GNOME2
-Summary(pt_BR.UTF-8):   Arquivos de dados tipo MIME para o desktop GNOME
+Summary(pl.UTF-8):	Biblioteki wirtualnego systemu plików dla GNOME2
+Summary(pt_BR.UTF-8):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
 Version:	2.4.3
 Release:	1
@@ -34,7 +34,7 @@ sistema GNOME.
 
 %package devel
 Summary:	Development files for gnome-mime-data
-Summary(pl.UTF-8):   Pliki potrzebne przy tworzeniu programów używajacych gnome-mime-data
+Summary(pl.UTF-8):	Pliki potrzebne przy tworzeniu programów używajacych gnome-mime-data
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
