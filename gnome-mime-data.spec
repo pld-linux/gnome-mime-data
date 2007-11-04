@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Biblioteki wirtualnego systemu plików dla GNOME2
 Summary(pt_BR.UTF-8):	Arquivos de dados tipo MIME para o desktop GNOME
 Name:		gnome-mime-data
 Version:	2.18.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-mime-data/2.18/%{name}-%{version}.tar.bz2
@@ -18,6 +18,8 @@ BuildRequires:	intltool
 BuildRequires:	libtool
 Provides:	gnome-vfs-data = %{version}
 Obsoletes:	gnome-vfs-data
+# sr@Latn vs. sr@latin
+Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _pkgconfigdir   %{_datadir}/pkgconfig
@@ -69,6 +71,8 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man5
 
 install man/gnome-vfs-mime.5 $RPM_BUILD_ROOT%{_mandir}/man5/gnome-vfs-mime.5
 
+[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
+	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}
 
 %clean
