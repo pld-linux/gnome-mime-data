@@ -1,17 +1,16 @@
-Summary:	The GNOME2 virtual file-system libraries
-Summary(pl.UTF-8):	Biblioteki wirtualnego systemu plików dla GNOME2
-Summary(pt_BR.UTF-8):	Arquivos de dados tipo MIME para o desktop GNOME
+Summary:	MIME and Application database for GNOME 2
+Summary(pl.UTF-8):	Baza danych MIME i aplikacji dla GNOME 2
 Name:		gnome-mime-data
 Version:	2.18.0
 Release:	3
-License:	LGPL
+License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-mime-data/2.18/%{name}-%{version}.tar.bz2
 # Source0-md5:	541858188f80090d12a33b5a7c34d42c
 Patch0:		%{name}-duplicate-keys.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.7
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.2.3
 BuildRequires:	intltool
@@ -23,22 +22,22 @@ Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module contains the base MIME and Application database for GNOME.
-It is meant to be accessed through the MIME functions in GnomeVFS.
+This package contains the base MIME and Application database for GNOME
+2. It is meant to be accessed through the MIME functions in GnomeVFS.
 
 %description -l pl.UTF-8
-Ten moduł zawiera bazowe MIME oraz bazę Aplikacji dla GNOME.
-Przeznaczony jest do udostępniania przez funkcje MIME w GnomeVFS.
+Ten pakiet zawiera podstawowe bazy danych MIME i aplikacji dla GNOME
+2. Przeznaczony jest do udostępniania przez funkcje MIME w GnomeVFS.
 
 %description -l pt_BR.UTF-8
 O GNOME MIME contém arquivos de identificação e tipos MIME para o
-sistema GNOME.
+sistema GNOME 2.
 
 %package devel
 Summary:	Development files for gnome-mime-data
 Summary(pl.UTF-8):	Pliki potrzebne przy tworzeniu programów używajacych gnome-mime-data
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+# doesn't require base
 
 %description devel
 Developmet files for gnome-mime-data.
@@ -55,6 +54,7 @@ Pliki potrzebne przy tworzeniu programów używajacych gnome-mime-data.
 %{__intltoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
