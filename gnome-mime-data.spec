@@ -11,7 +11,7 @@ Patch0:		%{name}-duplicate-keys.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 2.2.3
 BuildRequires:	intltool
 BuildRequires:	rpmbuild(macros) >= 1.446
