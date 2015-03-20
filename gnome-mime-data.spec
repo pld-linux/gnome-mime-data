@@ -2,7 +2,7 @@ Summary:	MIME and Application database for GNOME 2
 Summary(pl.UTF-8):	Baza danych MIME i aplikacji dla GNOME 2
 Name:		gnome-mime-data
 Version:	2.18.0
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-mime-data/2.18/%{name}-%{version}.tar.bz2
