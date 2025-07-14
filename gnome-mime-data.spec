@@ -47,7 +47,7 @@ Pliki potrzebne przy tworzeniu programów używajacych gnome-mime-data.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__glib_gettextize}
