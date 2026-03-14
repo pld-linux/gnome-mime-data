@@ -5,10 +5,10 @@ Version:	2.18.0
 Release:	5
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-mime-data/2.18/%{name}-%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/gnome-mime-data/2.18/%{name}-%{version}.tar.bz2
 # Source0-md5:	541858188f80090d12a33b5a7c34d42c
 Patch0:		%{name}-duplicate-keys.patch
-URL:		http://www.gnome.org/
+URL:		https://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	gettext-tools
